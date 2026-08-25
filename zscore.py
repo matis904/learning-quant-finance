@@ -1,5 +1,5 @@
 import numpy as np 
-import L6 
+import log_returns as L6
 
 z = (np.array(L6.lr) - np.array(L6.moy)) / np.array(L6.vol)
 haut = (np.abs(z) > 2).sum()
