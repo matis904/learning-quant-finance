@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 
-t1 = pd.read_csv(r"C:\Users\MATIS\Desktop\Py app\devenir quant\trades_simple.csv")
+t1 = pd.read_csv(r"data/trades_simple.csv")
 pnl1 = (t1["vente"] - t1["achat"]) * t1["quantite"]
-t2 = pd.read_csv(r"C:\Users\MATIS\Desktop\Py app\devenir quant\trades.csv")
+t2 = pd.read_csv(r"data/trades.csv")
 pnl2 = t2["pnl_brut"] - t2["frais"]
 
 def analyse(nom, pnls):

@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv(r"C:\Users\MATIS\Desktop\Py app\devenir quant\trades.csv")
+df = pd.read_csv(r"data/trades.csv")
 pnl = df["pnl_brut"] - df["frais"]
 p_gain = (pnl > 0).mean()
 p_perte = 1 - p_gain

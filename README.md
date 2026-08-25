@@ -8,6 +8,8 @@ I'm Matis, 17, a high-school student in France (final year, Management & Finance
 
 This repository is where that code lands. It's a learning log, not a portfolio of finished products — most files here are exercises written to understand one specific thing. I push them because they're what I did that day, not to fill a contribution graph.
 
+synthetics datas (CSV)
+
 Contact
 
 Matis Absalon — absalonmatis@gmail.com
