@@ -41,6 +41,15 @@ for ax, a in zip(axes, ["AETH", "BTCX", "STAB"]):
         print(len(rendements_trades))
         print(f"T-Stat : {round(np.mean(rendements_trades) / erreur, 2)}")
         print(f"buy and hold : {round(bh, 2)}")
+        idx_creux = np.argmin(dd)
+        ax.scatter(idx_creux, equity_curve[idx_creux], color="red", zorder=5, s=40)
+        idx_pic = np.argmax(pic[:idx_creux+1] == pic[idx_creux])  # le sommet avant ce creux
+        ax.plot([idx_pic, idx_creux], [pic[idx_creux], equity_curve[idx_creux]], color="red", linestyle="--", linewidth=1.2)
+        ax.annotate(f"DD max: {round(drawdown_max, 1)}%",
+            xy=(idx_creux, equity_curve[idx_creux]),
+            xytext=(idx_creux, equity_curve[idx_creux] * 0.85),
+            color="red", fontsize=8, ha="center",
+            arrowprops=dict(arrowstyle="->", color="red", lw=1))
         ax.plot(equity_curve, color="blue")
         ax.set_title(a)
     backtest(signal.tolist(), prix)
