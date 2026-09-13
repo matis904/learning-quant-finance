@@ -50,8 +50,10 @@ for ax, a in zip(axes, ["AETH", "BTCX", "STAB"]):
             xytext=(idx_creux, equity_curve[idx_creux] * 0.85),
             color="red", fontsize=8, ha="center",
             arrowprops=dict(arrowstyle="->", color="red", lw=1))
-        ax.plot(equity_curve, color="blue")
+        ax.plot(equity_curve, label="Strategy")
+        ax.plot([0, len(equity_curve)-1], [bh, bh], color="blue", linestyle="--", label="Buy and Hold")
         ax.set_title(a)
+        ax.legend()
     backtest(signal.tolist(), prix)
 plt.tight_layout()
 plt.show() #visualisation
