@@ -22,7 +22,8 @@ def analyse(nom, pnls):
     print(f"win rate : {wr}%")
     print(f"ratio : {ratio}")
 
-print("Analyse de la stratégie 1 : ")
-analyse("t1", pnl1)
-print("Analyse de la stratégie 2 : ")
-analyse("t2", pnl2)
+if __name__ == "__main__":
+    print("Analyse de la stratégie 1 : ")
+    analyse("t1", pnl1)
+    print("Analyse de la stratégie 2 : ")
+    analyse("t2", pnl2)
