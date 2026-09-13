@@ -45,4 +45,4 @@ for ax, a in zip(axes, ["AETH", "BTCX", "STAB"]):
         ax.set_title(a)
     backtest(signal.tolist(), prix)
 plt.tight_layout()
-plt.show()
+plt.show() #visualisation
