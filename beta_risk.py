@@ -14,8 +14,8 @@ def risk_measure(n, seed):
     t = alpha / erreur
     print(f"erreur : {erreur}")
     print(f"t-stat : {t}")
-    print(np.std(moyennes))       
-    print(0.005 / np.sqrt(n))     
+    print(np.std(moyennes))
+    print(0.005 / np.sqrt(n))
     print(f"beta : {beta}")
     print(f"alpha : {alpha}")
     print(f"residue : {residue.std()}")
